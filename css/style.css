@@ -1,0 +1,120 @@
+/**********DOCUMENT***************/
+
+html {
+	background: url('../assets/grocery2.jpg') no-repeat;
+	background-position: cover;
+	height: 600px;
+}
+
+#container1 {
+	float:left;
+	width: 800px;
+	height: 450px;
+	border: 1px solid #000;
+	margin: 50px 20px;
+	background: url(../assets/notepad1.jpg) no-repeat;
+	font-family: 'Waiting for the Sunrise', cursive;
+	box-shadow: 10px 5px 5px 10px hsla(0,0%,0%,.25);
+}
+
+#container2 {
+	width: 300px;
+	height: 350px;
+	border: 1px solid #000;
+	margin: 95px 20px;
+	background: #fff;
+	opacity:.8;
+	float:left;
+	font-family: 'Waiting for the Sunrise', cursive;
+	box-shadow: 10px 5px 5px 10px hsla(0,0%,0%,.25);
+}
+
+/************HEADER**************/
+
+header {
+	margin: 50px auto 0 auto;
+	text-align: center;
+}
+
+#title {
+	text-decoration: underline;
+	font-family: 'Permanent Marker', cursive;
+	margin-bottom: 15px;
+	font-size: 3em;
+}
+
+.input {
+	font-size: 25px;
+	margin-top: -25px;
+}
+
+.input input {
+	margin-left: 10px;
+	margin-top: -15px;
+	width:200px;
+	height:25px;
+}
+
+/**************LIST***************/
+
+section {
+	width:800px;
+}
+.list {
+	margin:45px 0 0 130px;
+	font-size: 25px;
+	width: 25%;
+}
+
+.list.item {
+	margin-top: 0;
+	margin-right: 0;
+	width: 60px;
+	height:40px;
+	display:block;
+}
+
+.list.item img {
+	display:inline;
+	float:right;
+}
+
+.list_link {
+	text-decoration: none;
+	color: #000;
+}
+
+.trash {
+	float:right;
+	margin-top:5px;
+}
+
+/***********DIRECTIONS***********/
+
+#title_dir {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.directions li {
+	font-size: 20px;
+	margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
