@@ -52,7 +52,14 @@ header {
 	margin-left: 10px;
 	margin-top: -15px;
 	width:200px;
-	height:25px;
+	height:30px;
+}
+
+.textarea {
+	font-family: 'Waiting for the Sunrise', cursive;
+	font-size: 17px;
+	text-align: center;
+	color:#888;	
 }
 
 .button-link {
@@ -103,7 +110,7 @@ section {
 .list.item {
 	margin-top: 0;
 	margin-right: 0;
-	width: 60px;
+	width: 80px;
 	height:40px;
 	display:block;
 }
@@ -121,6 +128,7 @@ section {
 .trash {
 	float:right;
 	margin-top:5px;
+	display: none;
 }
 
 /***********DIRECTIONS***********/
