@@ -4,6 +4,7 @@ html {
 	background: url('../assets/grocery2.jpg') no-repeat;
 	background-position: cover;
 	height: 600px;
+	width:1200px;
 }
 
 #container1 {
@@ -62,7 +63,7 @@ header {
 	color:#888;	
 }
 
-.button-link {
+.button-link, .button-remove {
     padding: 5px 10px;
     background: #4479BA;
     color: #FFF;
@@ -83,12 +84,12 @@ header {
     user-select:none;
 }
 
-.button-link:hover, .button-link:focus {
+.button-link:hover, .button-link:focus, .button-remove:hover, .button-remove:focus {
     background: #356094;
     text-decoration: none;
 }
 
-.button-link:active {
+.button-link:active, .button-remove:active {
     -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
     box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
@@ -102,7 +103,7 @@ section {
 	width:800px;
 }
 .list {
-	margin:45px 0 0 130px;
+	margin:-22px 0 0 130px;
 	font-size: 25px;
 	width: 25%;
 }

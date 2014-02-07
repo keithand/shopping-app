@@ -6,33 +6,40 @@ $(document).ready(function() {
 
 	});
 
-///////////////ADD TEXT TO FIRST LI////////////////////////
+///////////////ADD ITEMS TO LI////////////////////////
 
 	$('.button-link').bind('click', function(event){
 		var value = $('.textarea').val();
-		$('ol.list li span').first().text(value);	
-			 return false;
+		var templateLink = $('<li class="item"><span></span><img src="assets/trash1.png" class="trash" /></li>')
+		$(templateLink).find('span').text(value);
+		$('ol.list').append(templateLink);
+		return false;
 	});
 
-//////// I am not sure what to do next. I want to add a function that will take place after the keydown on the first li element is done.
+/////////////////CLICK ITEM STRIKE///////////////////
 
-//		$(this).next(function(event){
-//			$('ol.list li span').append('li class="item"><span>').text(value).append('</span><img src="assets/trash1.png" class="trash" /></li');
-//		});
+	$(document).on('click', 'li.item span', function(){
+		$(this).css({'text-decoration': 'line-through',
+					'color': 'red'}).parent().addClass('remove').toggle();
+	});
+
+	$(document).on('click', '.button-remove', function(){
+			 event.preventDefault();
+			 event.stopPropagation();
+			 $('li.item.remove').remove();
+	});
 
 
 ////////////////HOVER LI TO SHOW TRASH/////////////////////
 
-	$('ol.list li.item').hover(function() {
-		$(this).find('.trash').css('display', 'block');
-	}, function() {
-		$(this).find('.trash').css('display', 'none');
+	$('ol').on('hover', '.item', function() {
+		$(this).find('.trash').toggle();
 	});
 
 //////////////REMOVE LI WHEN CLICKING ON .TRASH//////////////
 
 	$('ol.list li.item').find('.trash').on('click', function(event) {
 		event.preventDefault();
-		$(this).closest('li').remove();
+		$(this).siblings('span').empty();
 	});
 });
