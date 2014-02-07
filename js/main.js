@@ -3,13 +3,15 @@ $(document).ready(function() {
 	$('.textarea').keyup(function(event){
 	 event.preventDefault();
 	 event.stopPropagation();
+
 	});
 
 ///////////////ADD TEXT TO FIRST LI////////////////////////
 
 	$('.button-link').bind('click', function(event){
 		var value = $('.textarea').val();
-		$('ol.list li span').append().text(value);
+			$('ol.list li span').append().text(value);	
+			 return false;
 	});
 
 //////// I am not sure what to do next. I want to add a function that will take place after the keydown on the first li element is done.
