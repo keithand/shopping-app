@@ -10,7 +10,7 @@ $(document).ready(function() {
 
 	$('.button-link').bind('click', function(event){
 		var value = $('.textarea').val();
-			$('ol.list li span').append().text(value);	
+		$('ol.list li span').first().text(value);	
 			 return false;
 	});
 
