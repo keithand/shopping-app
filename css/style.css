@@ -20,7 +20,7 @@ html {
 
 #container2 {
 	width: 300px;
-	height: 350px;
+	height: 370px;
 	border: 1px solid #000;
 	margin: 95px 20px;
 	background: #fff;
@@ -28,6 +28,7 @@ html {
 	float:left;
 	font-family: 'Waiting for the Sunrise', cursive;
 	box-shadow: 10px 5px 5px 10px hsla(0,0%,0%,.25);
+	cursor:help;
 }
 
 /************HEADER**************/
@@ -82,6 +83,7 @@ header {
     -moz-user-select:none;
     -ms-user-select:none;
     user-select:none;
+    cursor:pointer;
 }
 
 .button-link:hover, .button-link:focus, .button-remove:hover, .button-remove:focus {
@@ -116,9 +118,15 @@ section {
 	display:block;
 }
 
+.list.item span {
+	cursor:pointer !important;
+
+}
+
 .list.item img {
 	display:inline;
 	float:right;
+	cursor:pointer;
 }
 
 .list_link {

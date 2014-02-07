@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	$('.textarea').keyup(function(event){
-	 event.preventDefault();
+//	 event.preventDefault();
 	 event.stopPropagation();
 
 	});
@@ -25,7 +25,7 @@ $(document).ready(function() {
 	$(document).on('click', '.button-remove', function(){
 			 event.preventDefault();
 			 event.stopPropagation();
-			 $('li.item.remove').remove();
+			 $('li.item.remove').slideUp('slow');
 	});
 
 
@@ -41,4 +41,5 @@ $(document).ready(function() {
 		event.preventDefault();
 		$(this).siblings('span').empty();
 	});
+
 });
