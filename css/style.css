@@ -132,6 +132,11 @@ section {
 	display: none;
 }
 
+.remove {
+	text-decoration: line-through;
+	color:red;
+}
+
 /***********DIRECTIONS***********/
 
 #title_dir {

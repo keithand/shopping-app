@@ -19,8 +19,7 @@ $(document).ready(function() {
 /////////////////CLICK ITEM STRIKE///////////////////
 
 	$(document).on('click', 'li.item span', function(){
-		$(this).css({'text-decoration': 'line-through',
-					'color': 'red'}).parent().addClass('remove').toggle();
+		$(this).parent().toggleClass('remove');
 	});
 
 	$(document).on('click', '.button-remove', function(){
