@@ -15,7 +15,7 @@ html {
 	margin: 50px 20px;
 	background: url(../assets/notepad1.jpg) no-repeat;
 	font-family: 'Waiting for the Sunrise', cursive;
-	box-shadow: 10px 5px 5px 10px hsla(0,0%,0%,.25);
+	box-shadow: 5px 5px 5px 5px hsla(0,0%,0%,.25);
 }
 
 #container2 {
@@ -27,7 +27,7 @@ html {
 	opacity:.8;
 	float:left;
 	font-family: 'Waiting for the Sunrise', cursive;
-	box-shadow: 10px 5px 5px 10px hsla(0,0%,0%,.25);
+	box-shadow: 5px 5px 5px 5px hsla(0,0%,0%,.25);
 	cursor:help;
 }
 

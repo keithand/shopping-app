@@ -13,6 +13,7 @@ $(document).ready(function() {
 		var templateLink = $('<li class="item"><span></span><img src="assets/trash1.png" class="trash" /></li>')
 		$(templateLink).find('span').text(value);
 		$('ol.list').append(templateLink);
+		$('.textarea').val('');
 		return false;
 	});
 
@@ -25,7 +26,7 @@ $(document).ready(function() {
 	$(document).on('click', '.button-remove', function(){
 			 event.preventDefault();
 			 event.stopPropagation();
-			 $('li.item.remove').slideUp('slow');
+			 $('li.item.remove').slideUp();
 	});
 
 
@@ -43,7 +44,7 @@ $(document).ready(function() {
 
 	$('.list').on('click', 'li.item .trash', function(event) {
 		event.preventDefault();
-		$(this).parent('li').remove();
+		$(this).parent('li').slideUp();
 	});
 
 });
