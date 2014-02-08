@@ -31,15 +31,19 @@ $(document).ready(function() {
 
 ////////////////HOVER LI TO SHOW TRASH/////////////////////
 
-	$('ol').on('hover', '.item', function() {
-		$(this).find('.trash').toggle();
+	$('.list').on('mouseenter', 'li.item', function(event) {
+		$('.list li.item').find('.trash').show();
 	});
+	$('.list').on('mouseleave', 'li.item', function(event) {
+		$('.list li.item').find('.trash').hide();
+	});
+
 
 //////////////REMOVE LI WHEN CLICKING ON .TRASH//////////////
 
-	$('ol.list li.item').find('.trash').on('click', function(event) {
+	$('.list').on('click', 'li.item .trash', function(event) {
 		event.preventDefault();
-		$(this).siblings('span').empty();
+		$(this).parent('li').remove();
 	});
 
 });
