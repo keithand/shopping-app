@@ -32,10 +32,10 @@ $(document).ready(function() {
 ////////////////HOVER LI TO SHOW TRASH/////////////////////
 
 	$('.list').on('mouseenter', 'li.item', function(event) {
-		$('.list li.item').find('.trash').show();
+		$(this).find('.trash').show();
 	});
 	$('.list').on('mouseleave', 'li.item', function(event) {
-		$('.list li.item').find('.trash').hide();
+		$(this).find('.trash').hide();
 	});
 
 
