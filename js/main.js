@@ -3,18 +3,32 @@ $(document).ready(function() {
 	$('.textarea').keyup(function(event){
 //	 event.preventDefault();
 	 event.stopPropagation();
-
 	});
+
+	function placeItem (event) {
+		var value = $('.textarea').val();
+		var templateLink = $('<li class="item"><span></span><img src="assets/trash1.png" class="trash" /></li>')	
+		$(templateLink).find('span').text(value);
+		$('ol.list').append(templateLink);
+	}
 
 ///////////////ADD ITEMS TO LI////////////////////////
 
 	$('.button-link').bind('click', function(event){
-		var value = $('.textarea').val();
-		var templateLink = $('<li class="item"><span></span><img src="assets/trash1.png" class="trash" /></li>')
-		$(templateLink).find('span').text(value);
-		$('ol.list').append(templateLink);
-		$('.textarea').val('');
+		event.preventDefault();
+		placeItem ();
 		return false;
+	});
+
+	$('.textarea').bind('keyup', function(event){
+		var textArea = $('.textarea');
+		var input = textArea.val();
+		if ((event.which === 13) && (input !== "")) {
+			event.preventDefault();
+			placeItem ();
+			textArea.val('');
+			return false;
+		};
 	});
 
 /////////////////CLICK ITEM STRIKE///////////////////
