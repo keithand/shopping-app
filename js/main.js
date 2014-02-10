@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+	var textArea = $('.textarea');
+	var input = textArea.val();
+
 	$('.textarea').keyup(function(event){
 //	 event.preventDefault();
 	 event.stopPropagation();
@@ -14,10 +17,17 @@ $(document).ready(function() {
 
 ///////////////ADD ITEMS TO LI////////////////////////
 
-	$('.button-link').bind('click', function(event){
-		event.preventDefault();
-		placeItem ();
-		return false;
+	$('.button-link').bind('click', function(event){		
+		var textArea = $('.textarea');
+		var input = textArea.val();
+		if (input !== "") {
+			event.preventDefault();
+			placeItem ();
+			textArea.val('');
+			return false;
+		} else {
+			event.preventDefault();			
+		}
 	});
 
 	$('.textarea').bind('keyup', function(event){
@@ -28,6 +38,8 @@ $(document).ready(function() {
 			placeItem ();
 			textArea.val('');
 			return false;
+		} else {
+			event.preventDefault();
 		};
 	});
 
