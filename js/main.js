@@ -10,7 +10,7 @@ $(document).ready(function() {
 
 	function placeItem (event) {
 		var value = $('.textarea').val();
-		var templateLink = $('<li class="item"><span></span><img src="assets/trash1.png" class="trash" /></li>')	
+		var templateLink = $('<li class="item"><span style="cursor:pointer"></span><img src="assets/trash1.png" class="trash" style="cursor:pointer" /></li>')	
 		$(templateLink).find('span').text(value);
 		$('ol.list').append(templateLink);
 	}
