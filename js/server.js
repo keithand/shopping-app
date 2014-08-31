@@ -19,7 +19,7 @@ var server = http.createServer(function(req, res){
 
 		case "GET":
 			items.forEach(function(item, i){
-				res.write(i + '. ' + item + '\n')
+				res.write(i + '. ' + item + '\n');
 			});
 			res.end();
 			break;
@@ -55,13 +55,15 @@ var server = http.createServer(function(req, res){
 				res.end('This item does not exist, so cannot modify');
 			}
 			else {
-				
+				pathname = url.parse(req.url).pathname;
+				i = parseInt(pathname.slice(1), 10);				
 				items.splice(i, 1);
 				item = '';
 				
 				req.setEncoding('utf8');
 				req.on('data', function (chunk){
-					item += chunk;
+					item += chunk ;
+					console.log('+chuck works!');
 				});
 
 				req.on('end', function(){
